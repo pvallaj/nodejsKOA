@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "@koa/router": "^10.0.0",
+    "dotenv": "^16.0.0",
+    "koa": "^2.13.4",
+    "koa-combine-routers": "^4.0.2",
+    "koa-router": "^10.1.1",
+    "koa2-swagger-ui": "^5.3.0",
+    "mongoose": "^6.2.1",
+    "nodemon": "^2.0.15",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger2": "^3.0.1",
+    "swagger2-koa": "^3.0.1",
+    "yamljs": "^0.3.0"
+  }
+}

@@ -1,0 +1,44 @@
+swagger: "2.0"
+info:
+  title: "Ejemplo de documentación con Swaggery Yaml"
+  description: >
+    Este es un ejemplo muy simple de documentación de un API.
+  version: "1.0.0"
+host: "localhost:3000"
+schemes:
+  - "http"
+paths:
+  /health:
+    get:
+      summary: "Verifica el estado del servicio "
+      description: "UP. Si el servicio esta en ejecución y esta correcto, DOWN si hay algun error.'"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "El servicio esta correcto y arriba"
+          schema:
+            $ref: "#/definitions/Health"
+        500:
+          $ref: '#/responses/500'
+
+responses:
+  500:
+    description: Error en el proceso
+    schema:
+      $ref: '#/definitions/Error'
+
+definitions:
+  Health:
+    type: "object"
+    properties:
+      status:
+        type: "string"
+        enum:
+          - "UP"
+          - "DOWN"
+  Error:
+    Type: "String"
+    value: "Error interno"

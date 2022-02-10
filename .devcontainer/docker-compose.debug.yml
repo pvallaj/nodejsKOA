@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+  app-node-yml:
+    container_name: app-yml
+    image: node
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    volumes:
+      - ../:/app
+    tty: true
+    depends_on: 
+      - mongo-yml
+  mongo-yml:
+    container_name: dbs-yml
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABSE=yml
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=administrador
+    volumes:
+      - ../dbdata:/data/db 
+      - ../mongodb:/home/mongodb
+      - ../mongo-init/init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro

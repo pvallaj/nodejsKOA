@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  app:
+    container_name: nd-server
+    build: .
+    environment:
+      - URI=simple
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+  mongo:
+    container_name: db-server
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_DATABSE=yml
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=administrador
+    volumes:
+      - ../dbdata:/data/db
+#networks:
+#  app-net:
+#    driver: cd-1

@@ -1,0 +1,13 @@
+{
+    "name": "KOA ejemplo",
+
+ 
+    "extensions": ["dbaeumer.vscode-eslint"],
+  
+    "forwardPorts": [3000],
+
+    "dockerComposeFile": "./docker-compose.debug.yml",
+    "service": "app-node-yml",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/app"
+}
