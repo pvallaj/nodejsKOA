@@ -5,4 +5,4 @@ router.post('/', async (ctx, next) => {
   ctx.body = 'registros individuales'
 })
 
-module.export = router
+module.exports = router

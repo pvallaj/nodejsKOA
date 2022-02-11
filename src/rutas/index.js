@@ -10,4 +10,4 @@ const router = combineRouters(
     rtDiario
   )
   
-  module.export = router
+  module.exports = router

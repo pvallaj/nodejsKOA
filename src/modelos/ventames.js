@@ -1,0 +1,167 @@
+const mongoose = require('mongoose');
+
+const VentaMensualSchema = mongoose.Schema({
+
+        '1':{
+            type:Number,
+            require:false
+        },
+        '2':{
+            type:Number,
+            require:false
+        },
+        '3':{
+            type:Number,
+            require:false
+        },
+        '4':{
+            type:Number,
+            require:false
+        },
+        '5':{
+            type:Number,
+            require:false
+        },
+        '6':{
+            type:Number,
+            require:false
+        },
+        '7':{
+            type:Number,
+            require:false
+        },
+        '8':{
+            type:Number,
+            require:false
+        },
+        '9':{
+            type:Number,
+            require:false
+        },
+        '10':{
+            type:Number,
+            require:false
+        },
+        '11':{
+            type:Number,
+            require:false
+        },
+        '12':{
+            type:Number,
+            require:false
+        },
+        '13':{
+            type:Number,
+            require:false
+        },
+        '14':{
+            type:Number,
+            require:false
+        },
+        '15':{
+            type:Number,
+            require:false
+        },
+        '16':{
+            type:Number,
+            require:false
+        },
+        '17':{
+            type:Number,
+            require:false
+        },
+        '18':{
+            type:Number,
+            require:false
+        },
+        '19':{
+            type:Number,
+            require:false
+        },
+        '20':{
+            type:Number,
+            require:false
+        },
+        '21':{
+            type:Number,
+            require:false
+        },
+        '22':{
+            type:Number,
+            require:false
+        },
+        '23':{
+            type:Number,
+            require:false
+        },
+        '24':{
+            type:Number,
+            require:false
+        },
+        id_suc:{
+            type:Number,
+            require:true
+        },
+        fecha:{
+            type:String,
+            require:true
+        },
+        ventas:{
+            type:Number,
+            require:true
+        },
+        clientes:{
+            type:Number,
+            require:true
+        },
+        tipo:{
+            type:String,
+            require:true
+        },
+        venta_descripcion: {
+            type:String,
+            require:true
+        },
+        venta_descripcion_completa:{
+            type:String,
+            require:true
+        },
+        cantidad: {
+            type:Number,
+            require:true
+        },
+        venta_total:{
+            type:Number,
+            require:true
+        },
+        comision_total: {
+            type:Number,
+            require:true
+        },
+        venta_total_bruto: {
+            type:Number,
+            require:true
+        },
+        semana1: {
+            type:Number,
+            require:true
+        },
+        semana2: {
+            type:Number,
+            require:true
+        },
+        semana3: {
+            type:Number,
+            require:true
+        },
+        semana4: {
+            type:Number,
+            require:true
+        },
+        semana5: {
+            type:Number,
+            require:true
+        }
+        
+});
+module.exports = mongoose.model('VentaMensual', VentaMensualSchema);

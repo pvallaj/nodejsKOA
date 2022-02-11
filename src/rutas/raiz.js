@@ -5,4 +5,4 @@ router.get('/', async (ctx, next) => {
   ctx.body = 'raiz'
 })
 
-module.export = router
+module.exports = router
